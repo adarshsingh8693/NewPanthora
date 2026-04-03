@@ -5,13 +5,18 @@ pipeline {
 
         stage('Build') {
             steps {
-                bat 'mvn clean compile'
+				dir('Panthar') {
+                    bat 'mvn clean compile'
+                }
+               
             }
         }
 
         stage('Run Tests') {
             steps {
+				 dir('Panthar') {
                 bat 'mvn test -DsuiteXmlFile=smoke.xml'
+                }
             }
         }
     }
