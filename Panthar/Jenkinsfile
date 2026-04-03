@@ -13,7 +13,7 @@ pipeline {
         stage('Test') {
             steps {
                 dir('Panthar') {
-                    bat 'mvn test -DsuiteXmlFile=Panthar/smoke.xml'
+                    bat 'mvn test -DsuiteXmlFile=smoke.xml'
                 }
             }
         }
