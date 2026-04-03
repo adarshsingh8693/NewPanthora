@@ -2,22 +2,19 @@ pipeline {
     agent any
 
     stages {
-
         stage('Build') {
             steps {
-				dir('Panthar') {
+                dir('Panthar') {
                     bat 'mvn clean compile'
                 }
-               
             }
         }
 
-        stage('Run Tests') {
+        stage('Test') {
             steps {
-				 dir('Panthar') {
-                bat 'mvn test -DsuiteXmlFile=Panthar/smoke.xml'
+                dir('Panthar') {
+                    bat 'mvn test -DsuiteXmlFile=Panthar/smoke.xml'
                 }
             }
         }
     }
-}
