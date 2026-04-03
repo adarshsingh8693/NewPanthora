@@ -15,7 +15,7 @@ pipeline {
         stage('Run Tests') {
             steps {
 				 dir('Panthar') {
-                bat 'mvn test -DsuiteXmlFile=smoke.xml'
+                bat 'mvn test -DsuiteXmlFile=Panthar/smoke.xml'
                 }
             }
         }
