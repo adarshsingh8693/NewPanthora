@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 
 public class OrangeHrm {
 	
-	@Test
+	@Test(groups= {"smoke"})
 	public void createEmp() throws InterruptedException {
 		
 		WebDriver driver=new ChromeDriver();
@@ -68,7 +68,7 @@ public class OrangeHrm {
 		for(WebElement t:text) {
 	    	  
 	    	  String expected = t.getText();
-	    	 if(expected.equals("xyz")) {
+	    	 if(expected.equals(first)) {
 	    		 
 	    		 flag=true;
 	    		 System.out.println("found");
