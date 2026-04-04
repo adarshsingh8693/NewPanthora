@@ -49,8 +49,8 @@ public class OrangeHrm {
 		driver.findElement(By.xpath("//label[text()='Marital Status']/ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']/descendant::div[@class='oxd-select-text--after']")).click();
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//div[@class='oxd-select-option']/child::span[text()='Single']")).click();
-		Thread.sleep(2000);
-		driver.findElement(By.xpath("//label[text()='Date of Birth']/ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//input[@placeholder='yyyy-dd-mm']")).sendKeys("2000-26-03");
+		Thread.sleep(4000);
+		driver.findElement(By.xpath("//label[text()='Date of Birth']/ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']/descendant::input[@placeholder='yyyy-mm-dd']")).sendKeys("2000-26-03");
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//input[@value='1']/following-sibling::span[@class='oxd-radio-input oxd-radio-input--active --label-right oxd-radio-input']")).click();
 		Thread.sleep(2000);
